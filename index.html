@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="row justify-content-center">
+            <h1 class="mt-5 mx-2">Speedy Solver Game</h1>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="container my-5 p-5 game-container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 input-group countdown">
+                        <p><span id="countdown"></span> s</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-3">
+
+                    </div>
+                    <div class="col-sm-6 input-group my-5">
+                        <p class="mx-auto question"><span id="num1"></span> <span id="operation"></span> <span
+                                id="num2"> </span> &nbsp
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 input-group my-2 my-sm-0">
+                        <button onclick="startGame()" id="startBtn" class="btn px-5">Start</button>
+                    </div>
+                    <div class="col-sm-4 input-group">
+                        <input type="answer" class="form-control" id="guessInput">
+                    </div>
+                    <div class="col-sm-4 my-2 my-sm-0">
+                        <p>Score: <span id="currentScore"></span></p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col h6">
+                        <p>High Score: <span id="highScore"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <h3 class="mb-3">Settings</h3>
+        </div>
+
+        <div class="row mb-5">
+            
+            <div class="col settings-container">
+                
+                <div class="row justify-content-center my-3">
+                    <div class="col-lg-5 mr-lg-2 text-lg-end">
+                        <label for="customRange2" class="form-label h5">Number Range</label>
+                    </div>
+                    <div class="col-lg-5 ml-lg-2">
+                        <input type="range" class="form-range text-right" min="0" max="2" id="difficulty" value="0">
+                        <span id="difficultyLabel">Easy (1-10)*</label>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center my-3">
+                    <div class="col-lg-5 mr-lg-2 text-lg-end">
+                        <label class="form-label h5">Operations</label>
+                    </div>
+                    <div class="col-lg-5 ml-lg-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="addCheck"
+                                value="add" checked>
+                            <label class="form-check-label" for="addCheck">+ ( 10pts )</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="subtractCheck"
+                                value="subtract">
+                            <label class="form-check-label" for="subtractCheck">- ( 12pts )</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="multiplyCheck"
+                                value="multiply">
+                            <label class="form-check-label" for="multiplyCheck">* ( 15pts )</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="divideCheck"
+                                value="divide">
+                            <label class="form-check-label" for="divideCheck">/ ( 15pts )</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center my-3">
+                    <div class="col-lg-5 ml-lg-2">
+
+                    </div>
+                    <div class="col-lg-5 ml-lg-2">
+                        <i>*For division the answer and denominator will be in the set bounds</i>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center my-3">
+                    <div class="col-lg-5 mr-lg-2 text-lg-end">
+                        <label class="form-label h5">Multiplier</label>
+                    </div>
+                    <div class="col-lg-5 ml-lg-2">
+                        <div>
+                            <span id="multiplier"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="JS/app.js"></script>
+
+</html>

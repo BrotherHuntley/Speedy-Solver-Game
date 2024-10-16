@@ -1,0 +1,37 @@
+body {
+    background-image: url(./bg.jpg);
+    background-size: cover;
+}
+
+.question {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 24px;
+}
+
+button {
+    font-size: 24px !important;
+}
+
+.countdown {
+    background: #B0F201;
+}
+
+.game-container {
+    background-color: #C5BEBB99;
+    border-radius: 20px;
+}
+
+.settings-container {
+    background-color: #C5BEBB;
+    border-radius: 20px;
+}
+
+@media (min-width:992px) {
+    .text-lg-end {
+        text-align: right;
+    }
+}
